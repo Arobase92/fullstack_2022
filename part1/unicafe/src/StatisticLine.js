@@ -2,9 +2,15 @@ import React from 'react';
 
 const Statistics = ({text, per, value}) => {
 	return (
-		<div>
-			{text}: {value} {per}
-		</div>
+		<table>
+			<tbody>
+				<tr>
+					<td>{text}</td>
+					<td>{value}</td>
+					<td>{per}</td>
+				</tr>
+			</tbody>
+		</table>
 	);
 };
 
