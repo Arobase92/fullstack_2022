@@ -23,6 +23,19 @@ const App = () => {
 		setNeutral(neutral + 1);
 	}
 
+	if (allFeedback === 0){
+		return (
+			<div>
+				<h1>Give feedback</h1>
+				<button onClick={handleGoodClick}>good</button>
+				<button onClick={handleNeutralClick}>neutral</button>
+				<button onClick={handleBadClick}>bad</button>
+				<h1>statistics</h1>
+				<p>no feedback given</p>
+			</div>
+		)
+	}
+
 	return (
 		<div>
 			<h1>Give feedback</h1>
