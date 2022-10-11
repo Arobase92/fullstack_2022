@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Statistics = ({text, value}) => {
+const Statistics = ({text, per, value}) => {
 	return (
 		<div>
-			{text}: {value}
+			{text}: {value} {per}
 		</div>
 	);
 };
