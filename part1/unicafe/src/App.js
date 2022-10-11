@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Statistics from "./Statistics";
+import StatisticLine from "./StatisticLine";
 import Button from "./Button";
 
 const App = () => {
@@ -27,9 +27,9 @@ const App = () => {
 		return (
 			<div>
 				<h1>Give feedback</h1>
-				<button onClick={handleGoodClick}>good</button>
-				<button onClick={handleNeutralClick}>neutral</button>
-				<button onClick={handleBadClick}>bad</button>
+				<Button text='good' onClick={handleGoodClick}/>
+				<Button text='neutral' onClick={handleNeutralClick}/>
+				<Button text='bad' onClick={handleBadClick}/>
 				<h1>statistics</h1>
 				<p>no feedback given</p>
 			</div>
@@ -39,16 +39,16 @@ const App = () => {
 	return (
 		<div>
 			<h1>Give feedback</h1>
-			<button onClick={handleGoodClick}>good</button>
-			<button onClick={handleNeutralClick}>neutral</button>
-			<button onClick={handleBadClick}>bad</button>
+			<Button text='good' onClick={handleGoodClick}/>
+			<Button text='neutral' onClick={handleNeutralClick}/>
+			<Button text='bad' onClick={handleBadClick}/>
 			<h1>statistics</h1>
-			<Statistics text='good' value={good} per=''/>
-			<Statistics text='neutral' value={neutral} per=''/>
-			<Statistics text='bad' value={bad} per=''/>
-			<Statistics text='all' value={allFeedback} per=''/>
-			<Statistics text='average' value={average} per=''/>
-			<Statistics text='positive' value={positive} per='%'/>
+			<StatisticLine text='good' value={good} per=''/>
+			<StatisticLine text='neutral' value={neutral} per=''/>
+			<StatisticLine text='bad' value={bad} per=''/>
+			<StatisticLine text='all' value={allFeedback} per=''/>
+			<StatisticLine text='average' value={average} per=''/>
+			<StatisticLine text='positive' value={positive} per='%'/>
 		</div>
 	)
 }
